@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+    }
+    .calculator{
+       text-align: center;
+        background-color: aliceblue;
+        width: 420px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        background-color:#F5F5F5;
+       margin-top: 5rem;
+    }
+
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #ip{
+        width: 85%;
+        height: 40px;
+        margin: 10px;
+        font-size: 40px;
+        background-color: white;
+        color: #000000;
+
+    }
+    .button-container
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        height: 60px;
+        width: 80px;
+        margin: 10px;
+        background-color:gray;
+        font-size: 25px;
+        border-radius: 10px;
+    }
+    .btnop{
+        height: 60px;
+        width: 80px;
+        margin: 10px;
+        background-color:hsl(33, 95%, 53%);
+        font-size: 25px;
+        border-radius: 10px;
+    }
+
+    #btn1{
+        height: 60px;
+        width: 280px;
+        margin: 10px;
+        background-color:#414141;
+        font-size: 25px;
+        border-radius: 10px;
+        
+
+    }
+
+    button:hover{
+        background-color: rgba(0, 255, 128, 0.193);
+     
+
+    }
+    @media only screen and (max-width: 500px){
+        body{
+        display: flex;
+        justify-content: center;
+    }
+    .calculator{
+       text-align: center;
+        background-color: aliceblue;
+        width: 420px;
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        background-color:#F5F5F5;
+       margin-top: 5rem;
+    }
+
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    #ip{
+        width: 85%;
+        height: 40px;
+        margin: 10px;
+        font-size: 40px;
+        background-color: white;
+        color: #000000;
+
+    }
+    .button-container
+    {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn{
+        height: 50px;
+        width: 60px;
+        margin: 10px;
+        background-color:gray;
+        font-size: 25px;
+        border-radius: 10px;
+    }
+    .btnop{
+        height: 50px;
+        width: 60px;
+        margin: 10px;
+        background-color:hsl(33, 95%, 53%);
+        font-size: 25px;
+        border-radius: 10px;
+    }
+
+    #btn1{
+        height: 50px;
+        width: 220px;
+        margin: 10px;
+        background-color:#414141;
+        font-size: 25px;
+        border-radius: 10px;
+        
+
+    }
+
+    button:hover{
+        background-color: rgba(0, 255, 128, 0.193);
+     
+
+    }
+}
+</style>
+<body>
+    <div class="calculator">
+        <h1>calculator</h1>
+
+        <input type="text" id="ip">
+        
+        <div class="button-container">
+        <button class="btn"  onclick="currentValue= '' ; document.querySelector('#ip').value=currentValue; ">c</button>
+        <button class="btn" onclick="currentValue= currentValue+ '1' ; document.querySelector('#ip').value=currentValue; ">1</button>
+        <button class="btn"  onclick="currentValue= currentValue+ '2' ; document.querySelector('#ip').value=currentValue; ">2</button>
+        <button class="btn"  onclick="currentValue= currentValue+ '3'; document.querySelector('#ip').value=currentValue; ">3</button>
+        <button class="btnop"  onclick="currentValue= currentValue+'+' ; document.querySelector('#ip').value=currentValue; ">+</button>
+        <button class="btn"  onclick="currentValue= currentValue+'4' ; document.querySelector('#ip').value=currentValue; ">4</button>
+        <button class="btn"  onclick="currentValue= currentValue+'5' ; document.querySelector('#ip').value=currentValue; ">5</button>
+        <button class="btn"  onclick="currentValue= currentValue+'6' ; document.querySelector('#ip').value=currentValue; ">6</button>
+        <button class="btnop"  onclick="currentValue= currentValue+'-' ; document.querySelector('#ip').value=currentValue; ">-</button>
+        <button class="btn"  onclick="currentValue= currentValue+'7' ; document.querySelector('#ip').value=currentValue; ">7</button>
+        <button class="btn"  onclick="currentValue= currentValue+'8' ; document.querySelector('#ip').value=currentValue; ">8</button>
+        <button class="btn"  onclick="currentValue= currentValue+'9' ; document.querySelector('#ip').value=currentValue; ">9</button>
+        <button class="btnop"  onclick="currentValue= currentValue+'*' ; document.querySelector('#ip').value=currentValue; ">*</button>
+       
+        <button class="btnop"  onclick="currentValue= currentValue+'/'; document.querySelector('#ip').value=currentValue; ">/</button>
+        <button class="btn"  onclick="currentValue= currentValue+'0' ; document.querySelector('#ip').value=currentValue; ">0</button>
+
+        <button class="btn"  onclick="currentValue= currentValue+'.' ; document.querySelector('#ip').value=currentValue; ">.</button>
+        <button class="btnop"  onclick="currentValue= currentValue+'%' ; document.querySelector('#ip').value=currentValue; ">%</button>
+
+        <button id="btn1"  onclick=
+        "let result=eval(currentValue);
+        currentValue= result ; document.querySelector('#ip').value=currentValue; ">=</button>
+        </div>
+        
+        
+
+
+        <script>
+            let currentValue="";
+            document.querySelector('#ip').value=currentValue;
+
+            
+        </script>
+
+    </div>
+</body>
+</html>
